@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Courses
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>📚 Courses</h1>
+
+    <div class="cards">
+
+        {% for course in courses %}
+
+        <div class="card">
+
+            <h2>
+                {{ course.name }}
+            </h2>
+
+            <p>
+                <strong>Department:</strong>
+                {{ course.department }}
+            </p>
+
+            <p>
+                <strong>Duration:</strong>
+                {{ course.duration }}
+            </p>
+
+            <p>
+                {{ course.description }}
+            </p>
+
+        </div>
+
+        {% empty %}
+
+        <p>No courses available.</p>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}

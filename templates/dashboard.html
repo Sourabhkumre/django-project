@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+{% block content %}
+
+<div class="dashboard">
+
+    <h1>
+        📊 College Dashboard
+    </h1>
+
+    <p>
+        Welcome, {{ user.username }}
+    </p>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h2>👨‍🎓</h2>
+            <h3>Students</h3>
+            <a href="{% url 'students' %}">
+                Manage
+            </a>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>👨‍🏫</h2>
+            <h3>Teachers</h3>
+            <a href="{% url 'teachers' %}">
+                Manage
+            </a>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>📚</h2>
+            <h3>Courses</h3>
+            <a href="{% url 'courses' %}">
+                Manage
+            </a>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>📅</h2>
+            <h3>Attendance</h3>
+            <a href="{% url 'attendance' %}">
+                Manage
+            </a>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>📝</h2>
+            <h3>Results</h3>
+            <a href="{% url 'results' %}">
+                Manage
+            </a>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>📢</h2>
+            <h3>Notices</h3>
+            <a href="{% url 'notices' %}">
+                Manage
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

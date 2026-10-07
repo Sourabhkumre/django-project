@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Notices
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+    <h1>📢 College Notices</h1>
+
+    {% for notice in notices %}
+
+    <div class="notice">
+
+        <h2>
+            {{ notice.title }}
+        </h2>
+
+        <p>
+            {{ notice.description }}
+        </p>
+
+        <small>
+            {{ notice.date }}
+        </small>
+
+    </div>
+
+    {% empty %}
+
+    <p>No notices available.</p>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

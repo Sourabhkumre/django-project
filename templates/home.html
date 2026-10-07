@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Home | College Management System
+{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <h1>
+            Welcome to College Management System
+        </h1>
+
+        <p>
+            Manage students, teachers, courses,
+            attendance and results easily.
+        </p>
+
+        <a href="{% url 'dashboard' %}"
+           class="btn">
+
+            Go to Dashboard
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<section class="cards">
+
+    <div class="card">
+
+        <h2>👨‍🎓 Students</h2>
+
+        <p>
+            Manage student information and records.
+        </p>
+
+        <a href="{% url 'students' %}">
+            View Students
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>👨‍🏫 Teachers</h2>
+
+        <p>
+            Manage teacher information.
+        </p>
+
+        <a href="{% url 'teachers' %}">
+            View Teachers
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>📚 Courses</h2>
+
+        <p>
+            Manage college courses and departments.
+        </p>
+
+        <a href="{% url 'courses' %}">
+            View Courses
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>📅 Attendance</h2>
+
+        <p>
+            Check student attendance.
+        </p>
+
+        <a href="{% url 'attendance' %}">
+            View Attendance
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>📝 Results</h2>
+
+        <p>
+            View student marks and results.
+        </p>
+
+        <a href="{% url 'results' %}">
+            View Results
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>📢 Notices</h2>
+
+        <p>
+            View latest college notices.
+        </p>
+
+        <a href="{% url 'notices' %}">
+            View Notices
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
